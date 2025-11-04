@@ -16,6 +16,7 @@ class BasePage:
         time.sleep(15)
 
     def enter_text(self, locator, text):
+        self.wait.until(lambda d: d.execute_script("return document.readyState") == "complete")
         element = self.wait.until(EC.element_to_be_clickable(locator))
         element.clear()
         element.send_keys(text)
