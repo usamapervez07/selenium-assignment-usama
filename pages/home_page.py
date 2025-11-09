@@ -9,7 +9,7 @@ class HomePage(BasePage):
     continue_button= (By.XPATH, "//button[text()='Continue']")
     google_sign_in = (By.XPATH, "//efc-icon[contains(@class, 'close-button')]")
     profile_icon = (By.XPATH, "//efc-icon[@icon='profile']")
-    username = (By.XPATH, "//div[@class='dropdown-avatar-user-details']/span")
+    username = (By.XPATH, "(//div[@class='dropdown-avatar-user-details']/span)[2]")
 
     def login(self, email, password):
         self.click(self.google_sign_in)

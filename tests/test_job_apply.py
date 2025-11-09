@@ -11,5 +11,5 @@ def test_job_apply():
     searchPage.get_search_results()
     job_apply = JobApply(driver)
     job_apply.apply_to_first_job()
-    assert job_apply.is_upload_box_displayed() == True, "Application submission failed"
+    assert job_apply.is_submit_application_enabled() == True, "Application submission failed"
     driver.quit()
